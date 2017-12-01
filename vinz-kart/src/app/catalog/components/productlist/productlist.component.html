@@ -1,0 +1,16 @@
+<div>
+  <h2>Products</h2>
+
+  <div class="row" *ngFor="let p of products">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="https://i5.walmartimages.com/asr/b3fe1479-5b77-40fc-9f9c-a60d61b110c1_1.3797863de0927e422fa3209c5dd7d0d7.jpeg?odnHeight=150&odnWidth=150&odnBg=FFFFFF" alt="...">
+        <div class="caption">
+          <h3>{{p.Name}}</h3>
+          <p>{{p.Description}}</p>
+          <div><a href="#" class="btn btn-primary" role="button">Add to Cart</a>
+            <a href="#" class="btn btn-default" role="button">View Details</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
