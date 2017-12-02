@@ -1,16 +1,26 @@
 <div>
   <h2>Products</h2>
 
-  <div class="row" *ngFor="let p of products">
-    <div class="col-sm-6 col-md-4">
+  <div class="row">
+    <div class="col-sm-3 product-list" *ngFor="let p of products, let i = index">
       <div class="thumbnail">
-        <img src="https://i5.walmartimages.com/asr/b3fe1479-5b77-40fc-9f9c-a60d61b110c1_1.3797863de0927e422fa3209c5dd7d0d7.jpeg?odnHeight=150&odnWidth=150&odnBg=FFFFFF" alt="...">
+        <img src="../assets/img/imac_pic.png"
+          alt="...">
         <div class="caption">
-          <h3>{{p.Name}}</h3>
+          <h4>{{p.Name}}</h4>
           <p>{{p.Description}}</p>
-          <div><a href="#" class="btn btn-primary" role="button">Add to Cart</a>
-            <a href="#" class="btn btn-default" role="button">View Details</a></div>
+          <div class="price-box">
+            <h3>{{p.CurrencyCode}}{{p.Price}}
+              <small [ngClass]="{ 'text-danger' : p.Quantity < 10, 'text-warning' : p.Quantity >= 10 && p.Quantity < 20, 'text-success' : p.Quantity >= 20 }">
+                Only {{p.Quantity}} in Stock</small></h3>
+          </div>
+          <div class="action-box">
+            <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
+            <a href="#" class="btn btn-default" role="button">View Details</a>
+          </div>
         </div>
+      </div>
+      <div class="clearfix visible-xs-block">
       </div>
     </div>
   </div>

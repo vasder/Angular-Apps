@@ -12,6 +12,7 @@ import { CheckoutModule } from './checkout/checkout.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContainerComponent } from './components/container/container.component';
+import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 
 
 
@@ -21,7 +22,8 @@ import { ContainerComponent } from './components/container/container.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ContainerComponent
+    ContainerComponent,
+    SidemenuComponent
   ],
   imports: [
     BrowserModule,
