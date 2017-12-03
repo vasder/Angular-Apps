@@ -1,11 +1,69 @@
 <div class="products" *ngIf="product">
-  <h4>
-    {{product.Name}}
-  </h4>
-<div> 
+  <ol class="breadcrumb">
+    <li><a href="#">{{product.MainCategory}}</a></li>
+    <li><a href="#">{{product.UoM}}</a></li>
+    <li><a href="#">{{product.Category}}</a></li>
+    <li class="active">{{product.Name}}</li>
+  </ol>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{product.Name}}</h3>
+    </div>
+    <div class="panel-body">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="../assets/img/imac_pic.png" alt="...">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h4>{{product.Description}}</h4>
+        <h5>by {{product.SupplierName}}</h5>
+        <div>
+          <h3>{{product.CurrencyCode}}{{product.Price}}
+            <br>
+            <small *ngIf="product.Status === 'Available'" [ngClass]="{ 'text-danger' : product.Quantity < 10, 'text-warning' : product.Quantity >= 10 && product.Quantity < 20, 'text-success' : product.Quantity >= 20 }">
+                Only {{product.Quantity}} in Stock</small>
 
+            <small *ngIf="product.Status !== 'Available'" [ngClass]="{ 'text-danger' : product.Quantity < 1}">
+                Out of Stock</small>
+          </h3>
+        </div>
+        <div *ngIf="product.Status === 'Available'">
+          <p>{{ today | date : "'Get it by ' MMMM d, y" }}</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <ul>
+          <li>Operating System: </li>
+          <li>Weight: {{product.WeightMeasure}} {{product.WeightUnit}}</li>
+          <li>Display Size: {{product.Width}} X {{product.Depth}} X {{product.Height}} {{product.DimUnit}}</li>
+          <li>Display Size: </li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
+    </div>
+  </div>
 </div>
-<div>
-  <button type="button" class="btn btn-warning">Add to Cart</button>
-</div>
-</div>
+
+<!-- 
+           "ProductId": "HT-1000", 
+           "Category": "Laptops", 
+           "MainCategory": "Computer Systems", 
+           "TaxTarifCode": "1", 
+           "SupplierName": "Very Best Screens", 
+          "WeightMeasure": 4.2, "WeightUnit": "KG", 
+          "Description": "Notebook Basic 15 with 2,80 GHz quad core, 15\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro", 
+          "Name": "Notebook Basic 15", 
+          "DateOfSale":
+          "2017-03-26", 
+          "ProductPicUrl": "https://i5.walmartimages.com/asr/b3fe1479-5b77-40fc-9f9c-a60d61b110c1_1.3797863de0927e422fa3209c5dd7d0d7.jpeg?odnHeight=150&odnWidth=150&odnBg=FFFFFF",
+          "Status": "Available", 
+          "Quantity": 10, 
+          "UoM": "PC", 
+          "CurrencyCode": "$", "
+          Price": 956, 
+          "Width": 30, "Depth": 18,
+          "Height": 3, "DimUnit": "cm"
+ -->

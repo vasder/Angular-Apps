@@ -9,6 +9,7 @@ import { CatalogService } from '../../catalog.service';
 })
 export class ProductComponent implements OnInit {
   product;
+  today = Date.now();
   constructor(
     private route: ActivatedRoute,
     private service: CatalogService

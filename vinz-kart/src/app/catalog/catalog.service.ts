@@ -11,12 +11,12 @@ export class CatalogService {
     return this.http.get('/assets/products.json');
   }
 
-  getProductsById(prodId) {
+  getProductsById(productId) {
     const httpObservable = this.http.get('/assets/products.json');
     const modifiedObservable = httpObservable
       .map((products: any) => {
         return products.find(p => {
-          return p.ProductId === prodId;
+          return p.ProductId === productId;
         });
       });
     return modifiedObservable;

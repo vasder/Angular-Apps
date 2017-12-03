@@ -4,19 +4,24 @@
   <div class="row">
     <div class="col-sm-3 product-list" *ngFor="let p of products, let i = index">
       <div class="thumbnail">
-        <img src="../assets/img/imac_pic.png"
-          alt="...">
+        <img src="../assets/img/imac_pic.png" alt="...">
         <div class="caption">
           <h4>{{p.Name}}</h4>
           <p>{{p.Description}}</p>
           <div class="price-box">
             <h3>{{p.CurrencyCode}}{{p.Price}}
-              <small [ngClass]="{ 'text-danger' : p.Quantity < 10, 'text-warning' : p.Quantity >= 10 && p.Quantity < 20, 'text-success' : p.Quantity >= 20 }">
-                Only {{p.Quantity}} in Stock</small></h3>
+              <small *ngIf="p.Status === 'Available'" [ngClass]="{ 'text-danger' : p.Quantity < 10, 'text-warning' : p.Quantity >= 10 && p.Quantity < 20, 'text-success' : p.Quantity >= 20 }">
+                Only {{p.Quantity}} in Stock
+              </small>
+              <small *ngIf="p.Status !== 'Available'" [ngClass]="{ 'text-danger' : p.Quantity < 1}">
+                Out of Stock
+              </small>
+            </h3>
           </div>
           <div class="action-box">
             <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
-            <a href="#" class="btn btn-default" role="button">View Details</a>
+            <a href="#" class="btn btn-default" role="button" [routerLink]="['/product', p.ProductId]">View Details</a>
+
           </div>
         </div>
       </div>

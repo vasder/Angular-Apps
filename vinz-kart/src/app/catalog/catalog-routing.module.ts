@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ProductlistComponent
   },
   {
-    path: 'product/:prodId',
+    path: 'product/:productId',
     component: ProductComponent
   }
 ];
