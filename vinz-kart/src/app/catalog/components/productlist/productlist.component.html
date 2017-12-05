@@ -1,10 +1,10 @@
 <div>
-  <h2>Products</h2>
+  <!-- <h2>Products</h2> -->
 
   <div class="row">
     <div class="col-sm-3 product-list" *ngFor="let p of products, let i = index">
       <div class="thumbnail">
-        <img src="../assets/img/imac_pic.png" alt="...">
+        <img src="../assets/img/imac_pic.png" alt="{{p.Name}}" class="img-fluid responsive-img">
         <div class="caption">
           <h4>{{p.Name}}</h4>
           <p>{{p.Description}}</p>
@@ -20,7 +20,7 @@
           </div>
           <div class="action-box">
             <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
-            <a href="#" class="btn btn-default" role="button" [routerLink]="['/product', p.ProductId]">View Details</a>
+            <a [routerLink]="['/catalog/product', p.ProductId]" class="btn btn-default" role="button">View Details</a>
 
           </div>
         </div>
