@@ -1,0 +1,20 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name">
+    </div>
+    <div class="form-row">
+      <app-address [form]="form"></app-address>
+    </div>
+
+    <div class="form-row">
+      <app-navbar></app-navbar>
+    </div>
+  </form>
+
+</div>
+
+<pre>
+Form Values: {{form.value | json}}
+</pre>

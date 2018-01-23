@@ -1,0 +1,17 @@
+<div [formGroup]="form">
+
+  <div class="form-row">
+    <label for="address">Address</label>
+    <input formControlName="address" id="address" type="text">
+  </div>
+
+  <div class="form-row">
+    <label for="city">City</label>
+      <select id="city" formControlName="city">
+      <option value="New York">New York</option>
+      <option value="Chicago">Chicage</option>
+      <option value="California">California</option>
+      <option value="Las Vegas">Las Vegas</option>
+    </select>
+  </div>
+</div>

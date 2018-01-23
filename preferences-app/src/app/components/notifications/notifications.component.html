@@ -1,0 +1,47 @@
+<div [formGroup]="form">
+  <div class="container-fluid mw-700 ml-52">
+    <div>
+      <h3 class="hidden-md-up mt-26">Notifications</h3>
+    </div>
+    <div class="form-group mt-26">
+      <label for="keepNotifications">Keep Notifications for</label>
+      <select class="form-control" formControlName="keepNotifications" id="keepNotifications">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+  </select>
+    </div>
+
+    <div class="form-group mt-sm-34 mt-26">
+      Do Not Disturb
+      <div>
+        <div class="form-check form-check-inline mt-11">
+          <label class="form-check-label">
+          <input class="form-check-input" type="radio" formControlName="donotDisturb" id="donotDisturbOn" value="On"> On
+        </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">
+          <input class="form-check-input" type="radio" formControlName="donotDisturb" id="donotDisturbOff" value="Off"> Off
+        </label>
+        </div>
+      </div>
+
+      <div class="form-group mt-sm-34 mt-26">
+        <div>Select a date range to turn off notifications</div>
+        <div class="row">
+          <div class="col-md-5 mt-26">
+            <span>From:</span>
+            <app-datepicker></app-datepicker>
+            <input type="text" class="form-control mt-26 mw-75" id="fromtime" formControlName="fromtime">
+          </div>
+          <div class="col-md-5 mt-26">
+            <span>To:</span>
+            <app-datepicker></app-datepicker>
+            <input type="text" class="form-control mt-26 mw-75" id="totime" formControlName="totime">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

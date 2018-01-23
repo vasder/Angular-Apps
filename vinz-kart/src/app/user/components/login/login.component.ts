@@ -32,8 +32,10 @@ export class LoginComponent implements OnInit {
       const isSuccess = this.auth.login(this.loginForm.value);
       if (isSuccess) {
         this.router.navigate(['/']);
+        console.log('Login Success');
       } else {
         this.showError = true;
+        console.log('Login Failed');
       }
     }
   }

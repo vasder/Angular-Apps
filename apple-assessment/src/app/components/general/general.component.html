@@ -1,0 +1,78 @@
+<div [formGroup]="form">
+  <div class="container-fluid mw-700 ml-52">
+    <div>
+      <h3 class="hidden-md-up float-sm-left">General</h3>
+    </div>
+    <div class="form-group">
+      <label for="defaultLang">Default Language</label>
+      <select class="form-control" formControlName="defaultLang" id="defaultLang">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+            <select class="form-control" formControlName="state">
+              <option *ngFor="let l of genderList" [value]="l">{{l}}</option>
+            </select>
+            <ul>
+              LI
+              <li *ngFor="let hero of genderList">
+                {{ hero }}
+              </li>
+            </ul>
+
+      <div *ngIf="form.get('defaultLang').errors" class="text-danger mt-2">
+        This field is required.
+      </div>
+    </div>
+
+
+    <div class="form-group">
+    <label for="select">Gender</label>
+      <select id="select">   
+        <option *ngFor = "let g of genderList" value = "g"> {{g}} </option>
+      </select>
+    </div>
+
+
+    <div class="form-group mt-26">
+      <label for="displayName">Display Name</label>
+      <select class="form-control" formControlName="displayName" id="displayName">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+      <div *ngIf="form.get('displayName').errors" class="text-danger mt-2">
+        This field is required.
+      </div>
+    </div>
+
+    <div class="form-group mt-26">
+      <label for="placeHolder">Placeholder</label>
+      <select class="form-control" formControlName="placeHolder" id="placeHolder">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+      <div *ngIf="form.get('placeHolder').errors" class="text-danger mt-2">
+        This field is required.
+      </div>
+    </div>
+
+    <div class="form-group mt-26">
+      <label for="sysTimeOut">System Time Out</label>
+      <select class="form-control" formControlName="sysTimeOut" id="sysTimeOut">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+      <div *ngIf="form.get('sysTimeOut').errors" class="text-danger mt-2">
+        This field is required.
+      </div>
+    </div>
+    <!-- <pre>Form Values: {{form.value | json}}</pre> -->
+  </div>
+</div>

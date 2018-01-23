@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AuthGuard } from './auth.guard';
 
 
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContainerComponent } from './components/container/container.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
-import { AuthGuard } from './auth.guard';
+// import { LoginComponent } from './user/components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AuthGuard } from './auth.guard';
     HeaderComponent,
     FooterComponent,
     ContainerComponent,
-    SidemenuComponent
+    SidemenuComponent,
+    // LoginComponent
   ],
   imports: [
     BrowserModule,

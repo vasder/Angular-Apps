@@ -1,0 +1,144 @@
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+body {
+  font-family: "Myriad Pro", arial, helvetica, sans-serif;
+  color: #333333;
+}
+
+.modal-xxl .modal-lg {
+  max-width: 930px;
+}
+
+.modal-footer {
+  display: block;
+}
+
+.title {
+  font-size: 28px;
+  color: #333333;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 220px;
+  @media (max-width: #{$viewport-sm}) {
+    width: 100%;
+  }
+}
+
+.form-group select {
+  width: 220px;
+  @media (max-width: #{$viewport-sm}) {
+    width: 100%;
+  }
+}
+
+// .borders {
+//   border: 1px solid #{$border-color};
+//   @media (max-width: #{$viewport-sm}) {
+//     border-bottom: 1px solid #{$border-color};
+//     border-top: 0;
+//   }
+// }
+.btn-apply {
+  @media (max-width: #{$viewport-sm}) {
+    margin: 0 11px;
+  }
+}
+
+.mt-26 {
+  margin-top: 26px;
+}
+
+.mt-11 {
+  margin-top: 11px;
+}
+
+.mb-11 {
+  margin-bottom: 11px;
+}
+
+.mt-sm-34 {
+  @media (max-width: #{$viewport-sm}) {
+    margin-top: 34px;
+  }
+}
+
+.mt-sm-26 {
+  @media (max-width: #{$viewport-sm}) {
+    margin-top: 26px;
+  }
+}
+
+.mb-26 {
+  margin-bottom: 26px;
+}
+
+.ml-52 {
+  margin-left: 52 - 15px;
+  @media (max-width: #{$viewport-sm}) {
+    margin: 0 11px;
+  }
+}
+
+.mt-52 {
+  margin-top: 52px;
+  @media (max-width: #{$viewport-sm}) {
+    margin-top: 26px;
+  }
+}
+
+.mw-700 {
+  max-width: 700px;
+}
+
+.btn-secondary-lg {
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #d6d6d6;
+  color: #1876c7;
+  padding: 0px 11px;
+  height: 22px;
+  background-image: linear-gradient(to bottom, #e4e4e4 0%, #fefefe 51%, #e4e4e4 100%);
+}
+
+.btn-secondary-lg:hover {
+  background-position: top center;
+  color: #1876c7;
+}
+
+.btn-primary {
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #1279c9;
+  color: #FFFFFF;
+  padding: 0px 11px;
+  height: 22px;
+  background-image: linear-gradient(to top, #1279c9 0%, #439fe7 51%, #1279c9 100%);
+}
+
+.btn-primary:hover {
+  background-position: top center;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #d6d6d6;
+  color: #1876c7;
+  background-image: linear-gradient(to bottom, #e4e4e4 0%, #fefefe 51%, #e4e4e4 100%);
+  display: block;
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background-position: top center;
+  color: #1876c7;
+}

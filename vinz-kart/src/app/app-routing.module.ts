@@ -5,8 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
+    redirectTo: 'catalog',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    // component: 'LoginComponent'
+    redirectTo: 'login'
   }
 ];
 

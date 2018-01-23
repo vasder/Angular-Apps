@@ -17,6 +17,10 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     SharedModule
   ],
-  declarations: [ProfileComponent, LogoutComponent, LoginComponent]
+  declarations: [
+    ProfileComponent,
+    LogoutComponent,
+    LoginComponent
+  ]
 })
 export class UserModule { }

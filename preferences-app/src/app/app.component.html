@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit(form)" [formGroup]="form">
+  <app-header></app-header>
+  <div class="row">
+  <div class="col-md-3 hidden-md-down">
+    <app-nav-left></app-nav-left>
+  </div>
+  <div class="col-md-9 float-left ml-0">
+    <div class="mt-52 hidden-md-down">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="hidden-md-up">
+      <div class="form-row">
+        <app-general [form]="form"></app-general>
+      </div>
+      <div class="mt-52">
+        <app-notifications [form]="form"></app-notifications>
+      </div>
+    </div>
+  </div>
+</div>
+<app-navbar></app-navbar>
