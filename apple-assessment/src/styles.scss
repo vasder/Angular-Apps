@@ -39,13 +39,6 @@ input[type="text"] {
   }
 }
 
-// .borders {
-//   border: 1px solid #{$border-color};
-//   @media (max-width: #{$viewport-sm}) {
-//     border-bottom: 1px solid #{$border-color};
-//     border-top: 0;
-//   }
-// }
 .btn-apply {
   @media (max-width: #{$viewport-sm}) {
     margin: 0 11px;
@@ -141,4 +134,11 @@ input[type="text"] {
 .btn-secondary:hover {
   background-position: top center;
   color: #1876c7;
+}
+
+.dt-tx-box {
+  width: 167px !important;
+  @media (max-width: #{$viewport-sm}) {
+    width: 260px !important;
+  }
 }

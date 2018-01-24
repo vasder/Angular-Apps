@@ -3,8 +3,7 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-general',
-  templateUrl: './general.component.html',
-  styleUrls: ['./general.component.scss']
+  templateUrl: './general.component.html'
 })
 export class GeneralComponent implements OnInit {
 

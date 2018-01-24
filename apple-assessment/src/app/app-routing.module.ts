@@ -19,11 +19,6 @@ const appRoutes: Routes = [
     path: 'notifications',
     component: NotificationsComponent
   },
-  // {
-  //   path: 'contents',
-  //   redirectTo: '/contents',
-  //   pathMatch: 'full'
-  // },
   {
     path: '',
     redirectTo: '/modal',

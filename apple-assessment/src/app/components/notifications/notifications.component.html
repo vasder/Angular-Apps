@@ -3,15 +3,16 @@
     <div>
       <h3 class="hidden-md-up mt-26">Notifications</h3>
     </div>
-<div class="form-group mt-26">
-  <label for="keepNotifications">Keep Notifications for</label>
-  <select class="form-control" formControlName="keepNotifications" id="keepNotifications">
-    <option value="">1</option>
-    <option value="">2</option>
-    <option value="">3</option>
-    <option value="">4</option>
-  </select>
-</div>
+    
+    <div class="form-group mt-26">
+      <label for="keepNotifications">Keep Notifications for</label>
+      <select class="form-control" formControlName="keepNotifications" id="keepNotifications">
+        <option value="5">5 Days</option>
+        <option value="10">10 Days</option>
+        <option value="20">20 Days</option>
+        <option value="30">30 Days</option>
+      </select>
+    </div>
 
     <div class="form-group mt-sm-34 mt-26">
       Do Not Disturb
@@ -19,12 +20,12 @@
         <div class="form-check form-check-inline mt-11">
           <label class="form-check-label">
           <input class="form-check-input" type="radio" formControlName="donotDisturb" id="donotDisturbOn" value="On"> On
-        </label>
+          </label>
         </div>
         <div class="form-check form-check-inline">
           <label class="form-check-label">
           <input class="form-check-input" type="radio" formControlName="donotDisturb" id="donotDisturbOff" value="Off"> Off
-        </label>
+          </label>
         </div>
       </div>
 
@@ -43,5 +44,6 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>

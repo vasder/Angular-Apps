@@ -8,11 +8,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ReactiveformComponent implements OnInit {
 
   constructor() { }
-
-    form: FormGroup = new FormGroup({
-      name: new FormControl('', Validators.required),
-      address: new FormControl('', Validators.required),
-      city: new FormControl('', Validators.required),
+  submitted = false;
+  form: FormGroup = new FormGroup({
+    name: new FormControl('', Validators.required),
+    address: new FormControl('', Validators.required),
+    city: new FormControl('', Validators.required),
+    state: new FormControl('', Validators.required),
+    language: new FormControl('', Validators.required),
   });
 
   ngOnInit() {
@@ -22,6 +24,7 @@ export class ReactiveformComponent implements OnInit {
     console.log('Form Submitted ');
     if (this.form.valid) {
       console.log(this.form.value);
+      this.submitted = true;
     }
   }
 

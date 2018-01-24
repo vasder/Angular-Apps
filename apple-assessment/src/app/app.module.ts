@@ -8,7 +8,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GeneralComponent } from './components/general/general.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { ModalWindowComponent } from './components/modal-window/modal-window.component';
-import { ModalDirective } from './directives/modal.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavLeftComponent } from './components/nav-left/nav-left.component';
@@ -22,7 +21,6 @@ import { ContentsComponent } from './components/contents/contents.component';
     AppComponent,
     GeneralComponent,
     NotificationsComponent,
-    ModalDirective,
     HeaderComponent,
     NavbarComponent,
     NavLeftComponent,

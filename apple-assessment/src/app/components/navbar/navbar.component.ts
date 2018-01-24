@@ -3,11 +3,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent implements OnInit {
-  // @Input() navform: FormGroup;
+  @Input() navform: FormGroup;
   constructor() { }
 
   ngOnInit() {

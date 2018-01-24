@@ -1,20 +1,30 @@
-<div>
-  <form (ngSubmit)="onSubmit()" [formGroup]="form">
-    <div class="form-row">
-      <label for="name">Name</label>
-      <input type="text" id="name" formControlName="name">
-    </div>
-    <div class="form-row">
-      <app-address [form]="form"></app-address>
-    </div>
-
-    <div class="form-row">
-      <app-navbar></app-navbar>
-    </div>
-  </form>
-
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+<div *ngIf=submitted class="m-2 mw-100 alert alert-success" role="alert">
+  <strong>Well done!</strong> You successfully submitted.
 </div>
+<div class="row ml-2">
+  <div class="col-md-8">
+    <div>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-control" formControlName="name">
+          <div *ngIf="form.get('name').errors" class="text-danger mt-2">
+            This field is required.
+          </div>
+        </div>
+        <div class="form-row">
+          <app-address [form]="form"></app-address>
+        </div>
 
-<pre>
+    </div>
+  </div>
+  <div class="col-md-4 float-left ml-0">
+    <pre>
 Form Values: {{form.value | json}}
 </pre>
+  </div>
+</div>
+<div class="form-row m-2 mw-100">
+  <app-navbar></app-navbar>
+</div>
+</form>

@@ -25,9 +25,9 @@ export class ModalWindowComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm) {
+  onSubmit(form) {
     console.log('Form Submitted ');
-    console.log(form.value);
+    console.log(this.form.value);
     if (this.form.valid) {
       console.log(this.form.value);
     }
