@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenubarComponent implements OnInit {
 
   uname = sessionStorage.Username;
-  if(uname === '') {
+  if(uname) {
     console.log('Active session exists');
   }
   constructor() { }
