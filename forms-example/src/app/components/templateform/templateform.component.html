@@ -1,0 +1,64 @@
+<form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+  <div *ngIf=submitted class="m-2 mw-100 alert alert-success" role="alert">
+    <strong>Well done!</strong> You successfully submitted.
+  </div>
+  <div class="row ml-2">
+    <div class="col-md-8">
+      <h3>Student Details</h3>
+
+      <div class="form-group">
+        <label for="st_name">Name</label>
+        <input type="text" class="form-control" name="st_name" [(ngModel)]="model.st_name" id="st_name" #st_name="ngModel" required>
+        <div [hidden]="st_name.valid || st_name.pristine" class="alert alert-danger">
+          Name field is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="st_grade">Grade</label>
+        <input type="text" id="st_grade" name="st_grade" [(ngModel)]="model.st_grade" #st_grade="ngModel" required class="form-control">
+        <div [hidden]="st_grade.valid || st_grade.pristine" class="alert alert-danger">
+          Grade field is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="st_gender">Gender</label>
+        <label class="custom-control custom-radio">
+          <input [(ngModel)]="model.st_gender" value="Male" #st_gender="ngModel" id="st_gender_1" name="st_gender" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Male</span>
+        </label>
+        <label class="custom-control custom-radio">
+          <input [(ngModel)]="model.st_gender" value="Female" #st_gender="ngModel" id="st_gender_2" name="st_gender" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Female</span>
+        </label>
+        <div [hidden]="st_gender.valid || st_gender.pristine" class="alert alert-danger">
+          Gender field is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="st_insurance">Insurance Provider</label>
+        <select class="form-control" id="st_insurance" required [(ngModel)]="model.st_insurance" name="st_insurance" #st_insurance="ngModel">
+            <option *ngFor="let ins of insurances" [value]="ins">{{ins}}</option>
+          </select>
+        <div [hidden]="st_insurance.valid || st_insurance.pristine" class="alert alert-danger">
+          Name field is required
+        </div>
+      </div>
+
+          <!-- <app-address [form]="form"></app-address> -->
+
+    </div>
+    <div class="col-md-4 float-left ml-0">
+      <pre>
+Form Values: {{model | json}}
+</pre>
+    </div>
+  </div>
+  <div class="form-row m-2 mw-100">
+    <app-navbar></app-navbar>
+  </div>
+</form>

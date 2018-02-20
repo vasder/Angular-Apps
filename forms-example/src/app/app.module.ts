@@ -8,6 +8,11 @@ import { ReactiveformComponent } from './components/reactiveform/reactiveform.co
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddressComponent } from './components/address/address.component';
 import { AddressService } from './address.service';
+import { DynamicformComponent } from './components/dynamicform/dynamicform.component';
+import { TemplateformComponent } from './components/templateform/templateform.component';
+import { MenubarComponent } from './components/menubar/menubar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -15,7 +20,12 @@ import { AddressService } from './address.service';
     AppComponent,
     ReactiveformComponent,
     NavbarComponent,
-    AddressComponent
+    AddressComponent,
+    DynamicformComponent,
+    TemplateformComponent,
+    MenubarComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
