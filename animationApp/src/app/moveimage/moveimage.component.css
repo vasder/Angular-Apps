@@ -1,0 +1,21 @@
+    .moveMe {
+        position: relative;
+        left: "calc(100% - 128px)";
+        top: 300px;
+    }
+    
+    .place1 {
+        position: absolute;
+        top: 420px;
+        left: calc(100% - 128px);
+    }
+    
+    .place2 {
+        position: absolute;
+        top: 420px;
+        left: 20px;
+    }
+    img{
+        height: 100px;
+        width: 150px;
+    }

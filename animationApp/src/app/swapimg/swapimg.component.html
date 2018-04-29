@@ -1,0 +1,8 @@
+<div class="swapimg">
+  <!-- <hello name="{{ name }}"></hello> -->
+  <p>
+    Click on the CAR
+  </p>
+
+  <img [@fade]="state" (@fade.done)="onDone($event)" [src]="imageSource" width="500" (click)="onClick()" />
+</div>
